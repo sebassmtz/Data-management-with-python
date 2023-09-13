@@ -22,11 +22,11 @@ if es_vocal(char):
 else:
     print(f"'{char}' es una consonante.")
     
-
 def cuadratic(a, b, c):
     if a == 0:
         raise ValueError("El coeficiente 'a' no puede ser cero")
     
+
     discriminante = b**2 - 4*a*c
     
     if discriminante < 0:
