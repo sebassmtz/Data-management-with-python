@@ -16,12 +16,12 @@ with open('_personFile.json','r') as j:
 
 dataframe = pd.DataFrame(data)
 
-hdf = HDFStore('hdf_file.h5')
+hdf = pd.HDFStore('hdf_file.h5')
 
-# # store data in hdf5 file
+# # Almacenar datos en el archivo HDF5
 
 # hdf.put('key1', dataframe, format='table', data_columns=True)
-
+# hdf.close()
 # 3. Consultar sobre caracteristicas, gestión, carga y creación de archivos en formato HTML.
 #Proponer y realizar un ejercicio completo.
 
