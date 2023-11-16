@@ -13,7 +13,7 @@ frequency = df_position['position'].value_counts()
 formated_frecuency = frequency.rename({'G': 'Guardia', 'F': 'Delantero', 'C': 'Centro'})
 print(formated_frecuency)
 
-print("------------Ejercicio 2-------------------------")
+print("------------Ejercicio 2 punto 2-------------------------")
 
 url = "https://drive.google.com/uc?id=1jrD9j2zIzRFOcd48AiEwfS6re2uBdE1O"
 df = pd.read_csv(url, encoding='latin-1')
@@ -36,13 +36,13 @@ df = pd.read_csv(url, encoding='latin-1')
 # Probabilidad de Tormenta: Cuantitaviva continua
 # Humedad: Cuantitaviva continua
 # Pronóstico: Cualitativa nominal
-print('-------------------Ejercicio 3-------------------------')
+print('-------------------Ejercicio 2 punto 3-------------------------')
 # Calculando medidas de tendencia central
 print("--- Media ---",df['Temperatura'].mean())
 print("--- Mediana ---",df['Temperatura'].median())
 print("--- Moda ---",df['Temperatura'].mode())
 
-print('-------------------Ejercicio 4-------------------------')
+print('-------------------Ejercicio 2 punto 4-------------------------')
 
 fig, ax = plt.subplots()
 plt.boxplot(df['Temperatura'])
@@ -50,7 +50,7 @@ ax.set_title('Boxplot de Temperatura')
 ax.set_ylabel('Temperatura')
 plt.savefig('caja_de_bigotes_temperatura.png')
 plt.show()
-print('-------------------Ejercicio 5-------------------------')
+print('-------------------Ejercicio 2 punto 5-------------------------')
 
 print('Cuartiles respecto a la variable Presión')
 Q1 = df['Presión'].quantile(0.25)
@@ -66,12 +66,12 @@ print("desviación estandar respecto a la variable Presión:", df['Presión'].st
 
 print("Varianza respecto a la variable Presión:", df['Presión'].var())
 
-print("-------------------Ejercicio 6-------------------------")
+print("-------------------Ejercicio 2 punto 6-------------------------")
 
 array_temperature = np.array(df['Temperatura'])
 print(array_temperature)
 
-print('-------------------Ejercicio 7-------------------------')
+print('-------------------Ejercicio 2 punto 7-------------------------')
 
 print('Cuartiles respecto a la variable Temperatura')
 Q1 = df['Temperatura'].quantile(0.25)
@@ -87,7 +87,7 @@ print("desviación estandar respecto a la variable Temperatura:", df['Temperatur
 
 print("Varianza respecto a la variable Temperatura:", df['Temperatura'].var())
 
-print("-------------------Ejercicio 8-------------------------")
+print("-------------------Ejercicio 2 punto 8-------------------------")
 
 frequent_temp = df['Temperatura'].mode().values[0]
 print("Temperatura mas frecuente:", frequent_temp)
@@ -98,7 +98,7 @@ rango = np.ptp(frequent_values)
 
 print("Rango de la temperatura mas frecuente:", rango)
 
-print("-------------------Ejercicio 9-------------------------")
+print("-------------------Ejercicio 2 punto 9-------------------------")
 
 # Define el número de intervalos
 num_intervals = 10
@@ -135,7 +135,7 @@ max_std_dev_range = ranges[max_std_dev_index]
 
 print("Rango de temperatura con mayor dispersión:", max_std_dev_range)
 
-print("-------------------Ejercicio 10-------------------------")
+print("-------------------Ejercicio 2 punto 10-------------------------")
 
 # Calcula los cuartiles
 q1 = df['Temperatura'].quantile(0.25)
@@ -163,7 +163,7 @@ max_count_quartile = quartiles[max_count_index]
 
 print("Cuartil con la mayor cantidad de datos:", max_count_quartile)
 
-print("-------------------Ejercicio 11-------------------------")
+print("-------------------Ejercicio 3 punto 11-------------------------")
 
 fig, ax = plt.subplots()
 plt.boxplot(df['Humedad'])
@@ -173,7 +173,7 @@ ax.set_ylabel('Humedad')
 plt.savefig('caja_de_bigotes_humedad.png')
 plt.show()
 
-print("-------------------Ejercicio 12-------------------------")
+print("-------------------Ejercicio 3 punto 12-------------------------")
 
 print('Cuartiles respecto a la variable Temperatura')
 Q1 = df['Temperatura'].quantile(0.25)
@@ -189,13 +189,13 @@ print("desviación estandar respecto a la variable Temperatura:", df['Temperatur
 
 print("Varianza respecto a la variable Temperatura:", df['Temperatura'].var())
 
-print("-------------------Ejercicio 13-------------------------")
+print("-------------------Ejercicio 3 punto 13-------------------------")
 
 array_humidity = np.array(df['Humedad'])    
 
 print(array_humidity)
 
-print("-------------------Ejercicio 14-------------------------")
+print("-------------------Ejercicio 3 punto 14-------------------------")
 
 print('Cuartiles respecto a la variable Humedad')
 Q1 = df['Humedad'].quantile(0.25)
@@ -211,7 +211,7 @@ print("desviación estandar respecto a la variable Humedad:", df['Humedad'].std(
 
 print("Varianza respecto a la variable Humedad:", df['Humedad'].var())
 
-print("-------------------Ejercicio 15-------------------------")
+print("-------------------Ejercicio 3 punto 15-------------------------")
 
 frequent_temp = df['Humedad'].mode().values[0]
 print("Humedad mas frecuente:", frequent_temp)
@@ -222,7 +222,7 @@ rango = np.ptp(frequent_values)
 
 print("Rango de la Humedad mas frecuente:", rango)
 
-print("-------------------Ejercicio 16-------------------------")
+print("-------------------Ejercicio 3 punto 16-------------------------")
 
 # Define el número de intervalos
 num_intervals = 10
@@ -259,7 +259,7 @@ max_std_dev_range = ranges[max_std_dev_index]
 
 print("Rango de Humedad con mayor dispersión:", max_std_dev_range)
 
-print("-------------------Ejercicio 17-------------------------")
+print("-------------------Ejercicio 3 punto 17-------------------------")
 
 # Calcula Q1, Q3 y IQR
 Q1 = df['Velocidad del Viento'].quantile(0.25)
@@ -275,8 +275,7 @@ outliers = df[(df['Velocidad del Viento'] < lower_bound) | (df['Velocidad del Vi
 
 print("Valores atípicos en 'Velocidad del Viento':", outliers)
 
-print("-------------------Ejercicio 18-------------------------")
-
-forecast_frequencies = df['Pronóstico'].value_counts()
+print("-------------------Ejercicio 4 punto 18-------------------------")
+forecast_frequencies = df['Pronóstico '].value_counts()
 print("Frecuencias de los valores únicos en 'Pronóstico':")
 print(forecast_frequencies)
